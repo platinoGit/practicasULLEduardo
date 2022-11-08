@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class ObservacionesPlazoItem {
-	String atributo;
-	ObservacionesPlazoItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getObservacionesPlazoItem() {
+		return atributo;
+	}
+	
+	public void setObservacionesPlazoItem(String value) {
+		this.atributo = value;
 	}
 }

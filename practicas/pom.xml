@@ -6,7 +6,21 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>practicas</name>
-<modules>  <module>servicio-parent</module>
+<modules>
     <module>servicio-opendata</module>
   </modules>
-</project>
+  <properties>
+  	<fuse.version>7.11.0.fuse-sb2-7_11_0-00028-redhat-00001</fuse.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>ai.djl</groupId>
+            <artifactId>bom</artifactId>
+            <version>0.19.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+  </project>

@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class UnidadResponsableItem {
-	String atributo;
-	UnidadResponsableItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getUnidadResponsableItem() {
+		return atributo;
+	}
+	
+	public void setUnidadResponsableItem(String value) {
+		this.atributo = value;
 	}
 }

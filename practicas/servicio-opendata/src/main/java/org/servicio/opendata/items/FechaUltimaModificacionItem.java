@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class FechaUltimaModificacionItem {
-	String atributo;
-	FechaUltimaModificacionItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getFechaUltimaModificacionItem() {
+		return atributo;
+	}
+	
+	public void setFechaUltimaModificacionItem(String value) {
+		this.atributo = value;
 	}
 }

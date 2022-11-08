@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class TipoProcedimientoItem {
-	String atributo;
-	TipoProcedimientoItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getTipoProcedimientoItem() {
+		return atributo;
+	}
+	
+	public void setTipoProcedimientoItem(String value) {
+		this.atributo = value;
 	}
 }	

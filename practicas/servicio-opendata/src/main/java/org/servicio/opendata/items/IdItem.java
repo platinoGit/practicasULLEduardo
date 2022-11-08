@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class IdItem {
-	Integer atributo;
-	IdItem(Integer valor) {
-		atributo = valor;
+	protected Integer atributo;
+	
+	public Integer getIdItem() {
+		return atributo;
+	}
+	
+	public void setIdItem(Integer value) {
+		this.atributo = value;
 	}
 }

@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class FamiliaItem {
-	String atributo;
-	FamiliaItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getFamiliaItem() {
+		return atributo;
+	}
+	
+	public void setFamiliaItem(String value) {
+		this.atributo = value;
 	}
 }

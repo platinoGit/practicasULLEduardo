@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class InicioTramiteItem {
-	String atributo;
-	InicioTramiteItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getInicioTramiteItem() {
+		return atributo;
+	}
+	
+	public void setInicioTramiteItem(String value) {
+		this.atributo = value;
 	}
 }

@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class NivelAdministrativoItem {
-	String atributo;
-	NivelAdministrativoItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getNivelAdministrativoItem() {
+		return atributo;
+	}
+	
+	public void setNivelAdministrativoItem(String value) {
+		this.atributo = value;
 	}
 }

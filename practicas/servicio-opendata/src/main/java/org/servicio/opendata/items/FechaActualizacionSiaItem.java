@@ -1,8 +1,13 @@
 package org.servicio.opendata.items;
 
 public class FechaActualizacionSiaItem {
-	String atributo;
-	FechaActualizacionSiaItem(String valor) {
-		atributo = valor;
+	protected String atributo;
+	
+	public String getFechaActualizacionSiaItem() {
+		return atributo;
+	}
+	
+	public void setFechaActualizacionSiaItem(String value) {
+		this.atributo = value;
 	}
 }
