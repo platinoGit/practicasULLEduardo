@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="OpendataServiceBean" targetNamespace="http://opendata.servicio.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://opendata.servicio.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:portType name="OpendataServiceBeanPortType">
+  </wsdl:portType>
+  <wsdl:binding name="OpendataServiceBeanSoapBinding" type="tns:OpendataServiceBeanPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="OpendataServiceBean">
+    <wsdl:port name="OpendataServiceBeanPort" binding="tns:OpendataServiceBeanSoapBinding">
+      <soap:address location="http://localhost:9090/OpendataServiceBeanPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

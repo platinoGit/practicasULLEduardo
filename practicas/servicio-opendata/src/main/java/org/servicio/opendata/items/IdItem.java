@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class IdItem {
-	protected Integer atributo;
+	private Integer atributo;
 	
 	public Integer getIdItem() {
 		return atributo;

@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class FechaPublicacionItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getFechaPublicacionItem() {
 		return atributo;

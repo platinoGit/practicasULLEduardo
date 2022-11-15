@@ -8,6 +8,7 @@
   <name>practicas</name>
 <modules>
     <module>servicio-opendata</module>
+    <module>servicio-opendata-entrypoint</module>
   </modules>
   <properties>
   	<fuse.version>7.11.0.fuse-sb2-7_11_0-00028-redhat-00001</fuse.version>

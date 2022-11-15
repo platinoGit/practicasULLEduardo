@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class ObservacionesPlazoItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getObservacionesPlazoItem() {
 		return atributo;

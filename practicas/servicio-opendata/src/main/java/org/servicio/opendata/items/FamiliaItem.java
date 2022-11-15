@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class FamiliaItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getFamiliaItem() {
 		return atributo;

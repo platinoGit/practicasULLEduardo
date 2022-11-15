@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class FechaFinItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getFechaFinItem() {
 		return atributo;

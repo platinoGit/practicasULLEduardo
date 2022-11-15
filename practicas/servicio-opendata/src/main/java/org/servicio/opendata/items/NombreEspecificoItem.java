@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class NombreEspecificoItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getNombreEspecificoItem() {
 		return atributo;

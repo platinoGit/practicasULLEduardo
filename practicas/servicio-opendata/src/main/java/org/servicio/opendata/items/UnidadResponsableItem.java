@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class UnidadResponsableItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getUnidadResponsableItem() {
 		return atributo;

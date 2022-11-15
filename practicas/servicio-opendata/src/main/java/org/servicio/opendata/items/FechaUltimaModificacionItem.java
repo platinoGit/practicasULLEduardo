@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class FechaUltimaModificacionItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getFechaUltimaModificacionItem() {
 		return atributo;

@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class InicioTramiteItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getInicioTramiteItem() {
 		return atributo;

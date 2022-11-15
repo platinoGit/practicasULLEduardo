@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class TipoActuacionItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getTipoActuacionItem() {
 		return atributo;

@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class CodigoSiaItem {
-	protected Integer atributo;
+	private Integer atributo;
 	
 	public Integer getCodigoSiaItem() {
 		return atributo;

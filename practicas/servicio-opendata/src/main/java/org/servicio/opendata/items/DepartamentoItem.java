@@ -1,7 +1,7 @@
 package org.servicio.opendata.items;
 
 public class DepartamentoItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getDepartamentoItem() {
 		return atributo;

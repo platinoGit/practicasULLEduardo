@@ -1,7 +1,16 @@
 package org.servicio.opendata.items;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AmbitoItem", propOrder = {
+    "atributo",
+})
+
 public class AmbitoItem {
-	protected String atributo;
+	private String atributo;
 	
 	public String getAmbitoItem() {
 		return atributo;
