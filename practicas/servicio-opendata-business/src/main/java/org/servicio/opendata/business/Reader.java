@@ -1,4 +1,4 @@
-package org.servicio.opendata.entrypoint;
+package org.servicio.opendata.business;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader  {
+public class Reader {
 	public static void downloadFile(URL url, String outputFileName) throws IOException {
 		try (InputStream in = url.openStream();
 			ReadableByteChannel rbc = Channels.newChannel(in);
@@ -53,11 +53,10 @@ public class Reader  {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		String salida = "C:\\Users\\eduardo\\workspace\\practicasULLEduardo\\dataset.csv";
+		String salida = "C:\\Users\\eduardo\\workspace\\practicasULLEduardo\\practicas\\servicio-opendata-datasource\\dataset.csv";
 		URL ficheroURL = new URL("https://datos.canarias.es/catalogos/general/dataset/946cdcde-2118-48ef-a30a-f9dc812c82db/resource/10b71b12-fb77-47b7-88f6-ec46ebee1548/download/uweb-sicac-pdf-actuaciones-no-becas-premios-subvenciones-v1-0-10.csv");
 		
 		downloadFile(ficheroURL, salida);
 		readFile(salida);
 	}
 }
-	

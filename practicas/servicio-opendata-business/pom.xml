@@ -7,10 +7,10 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.practicas.servicio_opendata_entrypoint</groupId>
-	<artifactId>servicio-opendata-entrypoint</artifactId>
+	<artifactId>servicio-opendata-business</artifactId>
+	<packaging>jar</packaging>
 
-	<name>servicio-opendata-entrypoint</name>
+	<name>servicio-opendata-business</name>
 	<url>http://www.example.com</url>
 
 	<properties>

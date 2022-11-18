@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.practicas</groupId>
-  <artifactId>practicas</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>practicas</name>
-<modules>
-    <module>servicio-opendata</module>
-    <module>servicio-opendata-entrypoint</module>
-  </modules>
-  <properties>
-  	<fuse.version>7.11.0.fuse-sb2-7_11_0-00028-redhat-00001</fuse.version>
-  </properties>
-  <dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>ai.djl</groupId>
-            <artifactId>bom</artifactId>
-            <version>0.19.0</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
-  </project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.practicas</groupId>
+	<artifactId>practicas</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>practicas</name>
+	<properties>
+		<fuse.version>7.11.0.fuse-sb2-7_11_0-00028-redhat-00001</fuse.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss.redhat-fuse</groupId>
+				<artifactId>fuse-karaf-bom</artifactId>
+				<version>${fuse.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-blueprint</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-jaxb</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-core</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-cxf</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.5.0</version>
+            </dependency>
+
+			<dependency>
+				<groupId>org.springframework.osgi</groupId>
+				<artifactId>spring-osgi-core</artifactId>
+				<exclusions>
+					<exclusion>
+						<artifactId>org.springframework.aop</artifactId>
+						<groupId>org.springframework</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>org.springframework.context</artifactId>
+						<groupId>org.springframework</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>org.springframework.beans</artifactId>
+						<groupId>org.springframework</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>servicio-opendata</module>
+		<module>servicio-opendata-entrypoint</module>
+		<module>servicio-opendata-business</module>
+		<module>servicio-opendata-datasource</module>
+	</modules>
+</project>     
