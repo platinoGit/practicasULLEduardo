@@ -1,4 +1,4 @@
-package org.servicio.opendata.entrypoint.activation;
+package org.servicio.opendata.business.activation;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
