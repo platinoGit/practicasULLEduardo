@@ -7,10 +7,10 @@ import javax.jws.WebService;
 import org.servicio.opendata.items.ProcedimientoWsItem;
 
 @WebService(
-		targetNamespace = "http://practicas/",
+		targetNamespace = "http://opendata.canarias.es/servicios/opendata",
 		name = "OpendataServiceBean",
-		portName = "OpendataServiceBeanPort",
-		serviceName = "OpendataWebService"
+		portName = "OpendataService",
+		serviceName = "OpendataService"
 		)
 public interface OpendataService {
 	

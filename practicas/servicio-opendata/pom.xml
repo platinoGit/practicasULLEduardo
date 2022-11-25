@@ -47,17 +47,17 @@
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-java2ws-plugin</artifactId>
-				<version>${cxf.version}</version>
+				<version>3.5.4</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.cxf</groupId>
 						<artifactId>cxf-rt-frontend-jaxws</artifactId>
-						<version>${cxf.version}</version>
+						<version> 3.3.6.fuse-7_11_0-00038-redhat-00001</version>
 					</dependency>
 					<dependency>
 						<groupId>org.apache.cxf</groupId>
 						<artifactId>cxf-rt-frontend-simple</artifactId>
-						<version>${cxf.version}</version>
+						<version> 3.3.6.fuse-7_11_0-00038-redhat-00001</version>
 					</dependency>
 
 				</dependencies>
@@ -66,9 +66,9 @@
 						<id>generate-wsdl</id>
 						<phase>process-classes</phase>
 						<configuration>
-							<className>org.servicio.opendata.OpendataServiceBean
+							<className>org.servicio.opendata.OpendataService
                             </className>
-							<serviceName>OpendataServiceBean</serviceName>
+							<serviceName>OpendataService</serviceName>
 							<outputFile>C:/Users/eduardo/workspace/practicasULLEduardo/practicas/servicio-opendata-entrypoint/src/main/resources/META-INF/wsdl/${wsdlServiceName}.wsdl
                             </outputFile>
 							<genWsdl>true</genWsdl>

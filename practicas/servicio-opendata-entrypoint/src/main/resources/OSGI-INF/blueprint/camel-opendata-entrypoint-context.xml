@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:cxfcore="http://cxf.apache.org/blueprint/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xmlns:http="http://cxf.apache.org/transports/http/configuration"
+	xmlns:httpu="http://cxf.apache.org/transports/http-undertow/configuration"
+	xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.2.0"
+	xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0
+                               https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+                               http://camel.apache.org/schema/blueprint/cxf
+                               http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+                               http://cxf.apache.org/blueprint/core
+                               http://cxf.apache.org/schemas/blueprint/core.xsd
+                               http://cxf.apache.org/configuration/security
+                               http://cxf.apache.org/schemas/configuration/security.xsd
+                               http://cxf.apache.org/transports/http/configuration
+                               http://cxf.apache.org/schemas/configuration/http-conf.xsd
+                               http://cxf.apache.org/transports/http-undertow/configuration
+                               http://cxf.apache.org/schemas/configuration/http-undertow.xsd
+                               http://camel.apache.org/schema/blueprint
+                               http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+	<bean id="opendataEntrypointLogic"
+    	class="org.servicio.opendata.entrypoint.logic.OpendataEntrypointLogic" />
+	
+	<cxfcore:bus />
+	
+	<httpu:engine-factory bus="cxf">
+		<httpu:engine port="9090" host="0.0.0.0">
+			<httpu:tlsServerParameters
+				secureSocketProtocol="TLSv1.2">
+			</httpu:tlsServerParameters>
+		</httpu:engine>
+	</httpu:engine-factory>
+	
+	<cxf:cxfEndpoint id="opendata.cxf.ws" 
+                   address="http://localhost:9090/OpendataService"
+                   wsdlURL="classpath://META-INF/wsdl/opendata.wsdl"
+                   serviceClass="org.servicio.opendata.OpendataService">
+
+    <cxf:properties>
+      <entry key="ws-security.is-bsp-compliant" value="false" />
+      <entry key="mtom-enabled" value="true" />
+      <entry key="schema-validation-enabled" value="false" />
+      <entry key="dataFormat" value="POJO" />
+    </cxf:properties>
+
+  </cxf:cxfEndpoint>
+  
+  <camelContext id="opendata.entrypoint.routes"
+                xmlns="http://camel.apache.org/schema/blueprint">
+    <camel:packageScan>
+      <package>org.servicio.opendata.entrypoint.routes</package>
+    </camel:packageScan>
+  </camelContext>
+</blueprint>

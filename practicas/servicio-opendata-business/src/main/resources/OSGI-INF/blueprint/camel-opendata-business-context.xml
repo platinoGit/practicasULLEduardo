@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:camel="http://camel.apache.org/schema/blueprint"
+           xsi:schemaLocation="http://camel.apache.org/schema/blueprint
+                               http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+	
+  <camelContext id="opendata.business.routes"
+                xmlns="http://camel.apache.org/schema/blueprint">
+    <camel:packageScan>
+      <package>org.servicio.opendata.business.routes</package>
+    </camel:packageScan>
+  </camelContext>
+</blueprint>

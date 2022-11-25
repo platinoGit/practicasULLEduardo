@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="OpendataService" targetNamespace="http://opendata.canarias.es/servicios/opendata" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://opendata.canarias.es/servicios/opendata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<xs:schema xmlns:tns="http://opendata.canarias.es/servicios/opendata" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://opendata.canarias.es/servicios/opendata" version="1.0">
+
+  <xs:element name="buscarProcedimientos" type="tns:buscarProcedimientos"/>
+
+  <xs:element name="buscarProcedimientosResponse" type="tns:buscarProcedimientosResponse"/>
+
+  <xs:element name="crearProcedimiento" type="tns:crearProcedimiento"/>
+
+  <xs:element name="crearProcedimientoResponse" type="tns:crearProcedimientoResponse"/>
+
+  <xs:element name="eliminarProcedimiento" type="tns:eliminarProcedimiento"/>
+
+  <xs:element name="eliminarProcedimientoResponse" type="tns:eliminarProcedimientoResponse"/>
+
+  <xs:element name="getVersion" type="tns:getVersion"/>
+
+  <xs:element name="getVersionResponse" type="tns:getVersionResponse"/>
+
+  <xs:element name="modificarProcedimiento" type="tns:modificarProcedimiento"/>
+
+  <xs:element name="modificarProcedimientoResponse" type="tns:modificarProcedimientoResponse"/>
+
+  <xs:complexType name="buscarProcedimientos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buscarProcedimientosResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedimientos" type="tns:procedimientoWsItem"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="procedimientoWsItem">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="crearProcedimiento">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="crearProcedimientoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getVersion">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eliminarProcedimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eliminarProcedimientoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="modificarProcedimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="modificarProcedimientoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="buscarProcedimientos">
+    <wsdl:part name="parameters" element="tns:buscarProcedimientos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersionResponse">
+    <wsdl:part name="parameters" element="tns:getVersionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="crearProcedimientoResponse">
+    <wsdl:part name="parameters" element="tns:crearProcedimientoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eliminarProcedimiento">
+    <wsdl:part name="parameters" element="tns:eliminarProcedimiento">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarProcedimiento">
+    <wsdl:part name="parameters" element="tns:modificarProcedimiento">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarProcedimientoResponse">
+    <wsdl:part name="parameters" element="tns:modificarProcedimientoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="crearProcedimiento">
+    <wsdl:part name="parameters" element="tns:crearProcedimiento">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eliminarProcedimientoResponse">
+    <wsdl:part name="parameters" element="tns:eliminarProcedimientoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarProcedimientosResponse">
+    <wsdl:part name="parameters" element="tns:buscarProcedimientosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersion">
+    <wsdl:part name="parameters" element="tns:getVersion">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OpendataServiceBean">
+    <wsdl:operation name="buscarProcedimientos">
+      <wsdl:input name="buscarProcedimientos" message="tns:buscarProcedimientos">
+    </wsdl:input>
+      <wsdl:output name="buscarProcedimientosResponse" message="tns:buscarProcedimientosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearProcedimiento">
+      <wsdl:input name="crearProcedimiento" message="tns:crearProcedimiento">
+    </wsdl:input>
+      <wsdl:output name="crearProcedimientoResponse" message="tns:crearProcedimientoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input name="getVersion" message="tns:getVersion">
+    </wsdl:input>
+      <wsdl:output name="getVersionResponse" message="tns:getVersionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarProcedimiento">
+      <wsdl:input name="eliminarProcedimiento" message="tns:eliminarProcedimiento">
+    </wsdl:input>
+      <wsdl:output name="eliminarProcedimientoResponse" message="tns:eliminarProcedimientoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarProcedimiento">
+      <wsdl:input name="modificarProcedimiento" message="tns:modificarProcedimiento">
+    </wsdl:input>
+      <wsdl:output name="modificarProcedimientoResponse" message="tns:modificarProcedimientoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OpendataServiceSoapBinding" type="tns:OpendataServiceBean">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="buscarProcedimientos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="buscarProcedimientos">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="buscarProcedimientosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearProcedimiento">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="crearProcedimiento">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="crearProcedimientoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVersion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVersionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarProcedimiento">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eliminarProcedimiento">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eliminarProcedimientoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarProcedimiento">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="modificarProcedimiento">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modificarProcedimientoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OpendataService">
+    <wsdl:port name="OpendataService" binding="tns:OpendataServiceSoapBinding">
+      <soap:address location="http://localhost:9090/OpendataService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -8,7 +8,7 @@
 	</parent>
 
 	<artifactId>servicio-opendata-business</artifactId>
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 
 	<name>servicio-opendata-business</name>
 	<url>http://www.example.com</url>
@@ -17,6 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.activator>org.servicio.opendata.business.activation.Activator</project.activator>
 	</properties>
 
 	<dependencies>
@@ -32,7 +33,7 @@
 			<version>5.7.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.framework</artifactId>
@@ -40,17 +41,61 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.osgi -->
 		<dependency>
-			<groupId>org.eclipse.platform</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>3.18.100</version>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-blueprint</artifactId>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>2.1.214</version>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.aries.jpa</groupId>
+			<artifactId>org.apache.aries.jpa.blueprint</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-osgi</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>5.3.26.Final-redhat-00002</version>
 		</dependency>
 	</dependencies>
 
