@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="opendata-features"
+	xmlns="http://karaf.apache.org/xmlns/features/v1.4.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.4.0
+                              http://karaf.apache.org/xmlns/features/v1.4.0">
+
+	<feature name="opendata" version="${version}">
+		<feature version="${version}">rea-components</feature>
+	</feature>
+	
+	<feature name="opendata-components" version="${version}">
+		<bundle start-level="70">mvn:org.servicio.opendata/opendata-postgresql/${version}
+		</bundle>
+		<bundle start-level="80">mvn:org.servicio.opendata/opendata-datasource/${version}
+		</bundle>
+		<bundle start-level="100">mvn:org.servicio.opendata/opendata-contract/${version}
+		</bundle>
+		<bundle start-level="100">mvn:org.servicio.opendata/opendata-entrypoint/${version}
+		</bundle>
+		<bundle start-level="100">mvn:org.servicio.opendata/opendata-business/${version}
+		</bundle>
+	</feature>
+</features>

@@ -9,6 +9,8 @@
 
 	<groupId>com.practicas.servicio_opendata_entrypoint</groupId>
 	<artifactId>servicio-opendata-entrypoint</artifactId>
+	<version>5.1.8</version>
+
 
 	<name>servicio-opendata-entrypoint</name>
 	<url>http://www.example.com</url>
@@ -83,8 +85,7 @@
 		<dependency>
 			<groupId>org.eclipse.platform</groupId>
 			<artifactId>org.eclipse.osgi</artifactId>
-			<version>3.18.100</version>
-		</dependency>
+			</dependency>
 	</dependencies>
 
 	<build>

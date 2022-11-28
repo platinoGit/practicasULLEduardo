@@ -13,6 +13,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+                <version>5.1.8</version>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
@@ -61,5 +62,8 @@
 		<module>servicio-opendata-entrypoint</module>
 		<module>servicio-opendata-business</module>
 		<module>servicio-opendata-datasource</module>
-	</modules>
-</project>     
+	  <module>servicio-opendata-features</module>
+    <module>servicio-opendata-contract</module>
+    <module>servicio-opendata-postgresql</module>
+  </modules>
+</project>

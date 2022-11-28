@@ -31,12 +31,50 @@
 
   <xs:complexType name="buscarProcedimientosResponse">
     <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedimientos" type="tns:procedimientoWsItem"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedimientos" type="tns:ProcedimientoWsItem"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="procedimientoWsItem">
-    <xs:sequence/>
+  <xs:complexType name="ProcedimientoWsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ambito" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigo" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoSia" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="departamento" nillable="true" type="tns:DepartamentoWsItem"/>
+      <xs:element minOccurs="0" name="familia" type="xs:string"/>
+      <xs:element minOccurs="0" name="fecha_actualizacionSia" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="fecha_publicacion" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="fecha_ultima_modificacion" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="inicio_tramite" type="xs:string"/>
+      <xs:element minOccurs="0" name="nivel_administrativo" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre_especifico" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="observaciones_plazo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ruta" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipo_actuacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipo_procedimiento" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="unidad_responsable" type="tns:UnidadResponsableWsItem"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DepartamentoWsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigo" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UnidadResponsableWsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigo" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+    </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="crearProcedimiento">
