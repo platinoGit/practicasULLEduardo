@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.ForeignKey;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -55,7 +55,7 @@ public class UnidadResponsableEntity implements Serializable {
 	 * *******************************************************
 	 */
 	@ManyToOne()
-	@JoinColumn(name = "procedimiento", nullable = false, foreignKey  = @ForeignKey(name = "UNIDAD_RESPONSABLE_2_PROC_FK")) 
+	@JoinColumn(name = "procedimiento", nullable = false, foreignKey = @ForeignKey(name = "UNIDAD_RESPONSABLE_2_PROC_FK")) 
 	private ProcedimientoEntity procedimiento;
 	/*
 	 * *************************************************************************

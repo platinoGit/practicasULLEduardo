@@ -89,6 +89,8 @@ public class ProcedimientoEntity implements Serializable {
 	@OneToMany(mappedBy = "procedimiento", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<DepartamentoEntity> departamento;
 	
+	
+	
 	/*
 	 * *************************************************************************
 	 * *******************************************************
