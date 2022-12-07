@@ -3,12 +3,12 @@ node('principal'){
         checkout scm
     }
     stage('Compilación'){
-        sh "mvn clean package"
+        sh "cd practicas && mvn clean package"
     }
     stage('Empaquetado'){
-        sh "mvn install"
+        sh "cd practicas && mvn install"
     }
 	stage('Despliegue'){
-        sh "mvn deploy"
+        sh "cd practicas && mvn deploy"
 	}
 }
