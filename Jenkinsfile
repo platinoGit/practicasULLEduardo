@@ -3,15 +3,12 @@ node('principal'){
         checkout scm
     }
     stage('Compilación'){
-        sh "mvn clean package -DskipTests"
+        sh "mvn clean package"
     }
-    stage('Tests'){
-        sh "mvn test"
-    }
-	stage('Empaquetado'){
-        sh "mvn install -DskipTests"
+    stage('Empaquetado'){
+        sh "mvn install"
     }
 	stage('Despliegue'){
-        sh "mvn deploy -DskipTests"
+        sh "mvn deploy"
 	}
 }
