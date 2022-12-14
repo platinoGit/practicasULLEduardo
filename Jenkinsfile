@@ -1,6 +1,6 @@
 node('principal'){
     stage('Preparación') {
-        dir practicas && checkout scm
+        checkout scm
     }
     stage('Compilación'){
         sh "cd practicas && mvn clean package"
