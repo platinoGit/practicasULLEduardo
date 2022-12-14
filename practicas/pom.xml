@@ -65,4 +65,11 @@
 		<module>servicio-opendata-features</module>
 		<module>servicio-opendata-contract</module>
 	</modules>
+	<repositories>
+		<repository>
+			<id>redhat-ea-repository</id>
+			<name>redhat-ea-repository</name>
+			<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+		</repository>
+	</repositories>
 </project>
